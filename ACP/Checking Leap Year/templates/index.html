@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Checking Leap year</title>
+</head>
+<body>
+    <div class="container">
+        <div class="check">
+            <h1>Check leap year</h1>
+            <form action="/checking" method="post">
+                <input type="number" name="year" id="year" placeholder="Enter your year">
+                <br />
+                <button type="submit">Check</button>
+                {% if request.path == '/checking' %}
+                <div class="result">
+                    {% if isLeapYear %}<p class="result-label" style="margin-top: 20px; color: #008316;">{{ year }} is Leap year</p>{% endif %}
+                    {% if not isLeapYear %}<p class="result-label" style="margin-top: 20px; color: #8f0000;">{{ year }} is not Leap year</p>{% endif %}
+                    {% if error %}<p class="result-label" style="margin-top: 20px; color: #8f4500;">{{ error }}</p>{% endif %}
+                </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>

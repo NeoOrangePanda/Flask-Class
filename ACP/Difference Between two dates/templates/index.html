@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Difference between two dates</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="inputs">
+            <form class="date-inputs" action="/calculate" method="post">
+                <div class="dates">
+                    <div class="first-date">
+                        <h3>First Date</h3>
+                        <input type="text" name="first-date-input" id="first-date-input" placeholder="DD/MM/YYYY">
+                    </div>
+                    <div class="second-date">
+                        <h3>Second Date</h3>
+                        <input type="text" name="second-date-input" id="second-date-input" placeholder="DD/MM/YYYY">
+                    </div>
+                </div>
+                <div class="submit-section">
+                    <button type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+        {% if request.path == '/calculate' %}
+        <div class="box" id="result">
+            <p class="side-label" id="sno-1">Difference between two dates is</p>
+            <p class="result-label">{{ days }}</p>
+            <p class="side-label" id="sno-2">days</p>
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>

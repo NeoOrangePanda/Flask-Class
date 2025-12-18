@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Where Am I?</title></head>
+<body>
+  <h1>📍 Find My Location</h1>
+  <button onclick="locate()">Find My Place</button>
+  <p id="msg"></p>
+  <script>
+    function locate() {
+      navigator.geolocation.getCurrentPosition(p => {
+        fetch('/location', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            latitude: p.coords.latitude,
+            longitude: p.coords.longitude
+          })
+        }).then(r => r.json()).then(d => {
+          document.getElementById("msg").innerText = d.message;
+        });
+      });
+    }
+  </script>
+</body>
+</html>

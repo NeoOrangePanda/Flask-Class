@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            --bs-body-font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body class="bg-dark">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <form method="post" action="/loggingin" id="box" class="bg-white px-5 py-4 w-50 text-center rounded-1">
+            <h2 class="mb-3">Login</h2>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Username</span>
+                <input type="text" class="form-control" placeholder="Your Username here!" name="email-input" id="username-input">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Password</span>
+                <input type="password" class="form-control" placeholder="Your Password here!" name="password-input" id="password-input">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2 mb-3">Login</button>
+            <p>Don't have an account? <a href="/register">Register!</a></p>
+        </form>
+    </div>
+</body>
+</html>

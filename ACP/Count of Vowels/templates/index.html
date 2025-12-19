@@ -18,7 +18,7 @@
                 class="bg-slate-800 text-slate-500 w-100 px-5 py-2 outline-none rounded-sm border border-slate-700 mb-4">
             <button class="bg-indigo-800/60 py-2 w-100 rounded-sm cursor-pointer text-indigo-500 font-semibold hover:bg-indigo-800/40 transition-all duration-200" type="submit">Count Vowels</button>
             {% if request.path == '/count' %}
-            <p class="text-slate-500 mt-4"><span class="font-semibold">String:</span> {{ s }}</p>
+            <p class="text-slate-500 mt-4"><span class="font-semibold">String:</span> {{ s | safe }}</p>
             <p class="text-slate-500 mt-2"><span class="font-semibold">Vowels counted:</span> {{ v_count }}</p>
             {% endif %}
         </form>

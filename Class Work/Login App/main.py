@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
+import re
 
 app = Flask(__name__)
 app.secret_key = "secret_key"
 
-db_path = 'Class Work\Login App\users.db'
+db_path = 'Class Work/Login App/users.db'
 
 def init_db():
     conn = sqlite3.connect(db_path)

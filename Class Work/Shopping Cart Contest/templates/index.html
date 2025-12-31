@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Shopping Cart Contest</title>
+</head>
+<body class="font-[Poppins] bg-gray-300">
+    <div id="container" class="flex items-center justify-center min-h-[100vh]">
+        <div id="form-box" class="bg-white text-center w-[50%] py-10 px-20 rounded-lg border-[2px] border-gray-400">
+            <h2 class="text-3xl font-semibold mb-3">Customer Entry</h2>
+            <p class="text-zinc-600 mb-7">Fill in the today's purchase details to join the daily winner contest</p>
+            <form action="/details" method="post" class="flex flex-col">
+                <label class="text-lg font-medium text-zinc-500">Name</label>
+                <input type="text" name="user_name" id="user_name" class="border border-zinc-500 outline-none rounded-md mt-3 mb-5 px-5 py-1.5 focus:border-2 focus:border-blue-500" placeholder="Your name here" required>
+
+                <label class="text-lg font-medium text-zinc-500">Phone Number</label>
+                <input type="text" name="contact_number" id="contact_number" class="border border-zinc-500 outline-none rounded-md mt-3 mb-5 px-5 py-1.5 focus:border-2 focus:border-blue-500" placeholder="Your phone number here" required>
+
+                <label class="text-lg font-medium text-zinc-500">Total Items</label>
+                <input type="number" name="number_of_items" id="number_of_items" class="border border-zinc-500 outline-none rounded-md mt-3 mb-5 px-5 py-1.5 focus:border-2 focus:border-blue-500" placeholder="Number of items" required>
+
+                <label class="text-lg font-medium text-zinc-500">Total Amount</label>
+                <input type="number" name="amount" id="amount" class="border border-zinc-500 outline-none rounded-md mt-3 mb-5 px-5 py-1.5 focus:border-2 focus:border-blue-500" placeholder="Amount of Money" required>
+
+                <label class="text-lg font-medium text-zinc-500">Date</label>
+                <input type="date" name="current_date" id="current_date" class="border border-zinc-500 outline-none rounded-md mt-3 mb-5 px-5 py-1.5 focus:border-2 focus:border-blue-500" required>
+
+                <button type="submit" class="bg-blue-500 py-3 cursor-pointer text-white font-semibold rounded-lg hover:bg-blue-600 transition-all mb-4">Submit Entry</button>
+                <a href="/winner" class="text-blue-500 underline hover:text-blue-600">See today's winner</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

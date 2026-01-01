@@ -9,9 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Resume</title>
 </head>
-<body class="font-[Poppins] bg-slate-950 select-none">
+<body class="font-[Poppins] bg-slate-950">
     <div class="sticky top-0 text-white bg-slate-900 flex items-center justify-between px-50 py-4.5 border-b-3 border-b-slate-800" id="navbar">
-        <a href="#intro" class="font-semibold text-[21px]">Resume | Raaeid Akram</a>
+        <a href="#intro" class="font-semibold text-[21px]">Resume | {{ info_set[0] }}</a>
         <section class="flex items-center gap-[1.5vw] transition-all">
             <a href="#intro" class="text-indigo-500/60 text-[17px] hover:font-medium hover:text-indigo-400 transition-all duration-200">Intro</a>
             <a href="#about" class="text-indigo-500/60 text-[17px] hover:font-medium hover:text-indigo-400 transition-all duration-200">About</a>
@@ -24,10 +24,10 @@
         <div id="content-grid-box-1">
             <p class="text-white text-[22px] font-semibold">Hi, I am</p>
             <p class="text-white text-[50px] font-semibold mb-2">
-                <span class="cursor-pointer transition-all hover:text-blue-500 hover:text-shadow-md hover:text-shadow-blue-600">Raaeid</span>
-                <span class="cursor-pointer transition-all hover:text-red-500 hover:text-shadow-md hover:text-shadow-red-600">Akram</span>
+                <span class="cursor-pointer transition-all hover:text-blue-500 hover:text-shadow-md hover:text-shadow-blue-600">{{ s[0] }}</span>
+                <span class="cursor-pointer transition-all hover:text-red-500 hover:text-shadow-md hover:text-shadow-red-600">{{ s[1] }}</span>
             </p>
-            <p class="text-[18.5px] text-slate-400 font-medium">Frontend Website Designer</p>
+            <p class="text-[18.5px] text-slate-400 font-medium">{{ info_set[2] }}</p>
             <p class="mt-4.5 text-base/7 text-slate-600 font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan quis sapien non facilisis. Maecenas ut lorem porttitor, varius nisi ultrices, suscipit mauris. Sed tempor semper eleifend. Proin aliquet et sem in dapibus. Maecenas a dui sit amet turpis dignissim pellentesque. Suspendisse potenti. Maecenas at mollis dui. Aenean gravida libero at nulla consectetur, facilisis pretium felis ullamcorper.</p>
         </div>
         <img src="/static/image.png" class="w-60" alt="" id="content-grid-box-2">
@@ -178,11 +178,11 @@
         <p class="text-center text-white font-semibold text-4xl mb-8">Contact Me</p>
         <p class="text-center text-slate-400 font-medium text-xl">For more questions, ask me</p>
         <p class="text-slate-500 text-center mt-3">
-            <span>Mobile Number: +8801713441449</span><br>
-            <span>Email: h.codingal@gmail.com</span>
+            <span>Mobile Number: {{ info_set[3] }}</span><br>
+            <span>Email: {{ info_set[1] }}</span>
         </p>
         <br>
-        <p class="text-center text-slate-500 font-semibold">2025 &copy; Copyrighted By Raaeid Akram. All Rights Reserved.</p>
+        <p class="text-center text-slate-500 font-semibold">2025 &copy; Copyrighted By {{ info_set[0] }}. All Rights Reserved.</p>
     </div>
 </body>
 </html>

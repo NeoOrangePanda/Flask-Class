@@ -14,19 +14,18 @@
         <div id="form-box" class="bg-white text-center w-[50%] py-10 px-20 rounded-lg border-[2px] border-gray-400">
             <h2 class="text-3xl font-semibold mb-3">Daily Contest</h2>
 
-            <!-- {% if username %} -->
-            <p>!! Congratulations !!</p>
-            <p>You are today's top customer</p>
-            <p>Username (jinja)</p>
-            <p>Contact: (jinja)</p>
-            <!-- {% else %} -->
+            {% if user_name %}
+            <p class="text-red-500 font-medium text-xl mb-2">!! Congratulations !!</p>
+            <p class="text-red-500 font-medium">You are today's top customer</p>
+            <p class="text-5xl font-bold text-blue-500 mt-9 mb-4">{{ user_name }}</p>
+            <p class="text-xl font-semibold text-slate-500">Contact: {{ phone_number }}</p>
+            {% else %}
             <p>No winner yet</p>
             <p>Once today's purchase is added, we will announce the winner here.</p>
-            <!-- {% endif %} -->
-
-            <a href="/">Go to entry</a>
-            <a href="/winner">Refresh</a>
-
+            {% endif %}
+            <br>
+            <a href="/" class="text-blue-500 underline hover:text-blue-600">Go to entry</a><br>
+            <a href="/winner" class="text-blue-500 underline hover:text-blue-600">Refresh</a>
         </div>
     </div>
 </body>
